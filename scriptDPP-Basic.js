@@ -1,6 +1,7 @@
 // Change page on nav-item click
 let titles = document.querySelectorAll('#navbar .navbar-nav li');
 
+
 for (let title of titles){
     title.addEventListener('click', function(){
         // Get num of the nav-items

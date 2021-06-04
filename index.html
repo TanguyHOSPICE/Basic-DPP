@@ -19,50 +19,51 @@
 </head>
 
 <body class="container-fluid">
-  <!-- TODO responsiv and burger menu on small screen -->
-  <header class="navbar navbar-expand-md  justify-content-between fixed-top border-bottom navbar-light"
-    style="background-color: #e3f2fd;">
-    <!-- TODO Insert svg logo and directory ./assets/icons/DPP.svg -->
-    <!-- LOGO Part Start -->
-    <a href="#home" class=" navbar-brand d-flex align-items-center text-decoration-none text-primary "
-      aria-current="page">
-      <svg class="bi me-2" width="40" height="32">
-        <use xlink:href="./assets/icons/DPP.svg"></use>
-      </svg>
-      <span class="fs-4">Dépression Post Partum</span>
-    </a>
-    <!-- LOGO Part End -->
-    <!-- Burger button Start -->
-    <!-- TODO Add ScrollSpy in html and JS -->
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
+  <header class="navbar navbar-expand-md  justify-content-between fixed-top border-bottom navbar-light">
     <div class="collapse navbar-collapse" id="navbar-content">
+
       <nav id="navbar">
         <ul class="navbar-nav">
+          <!-- LOGO Part Start -->
           <li data-tabtitle="0" class="nav-item active">
+            <a href="#home" data-tabtitle="0"
+              class="navbar-brand d-flex align-items-center text-decoration-none text-primary " aria-current="page">
+              <!-- TODO Insert svg logo and directory ./assets/icons/DPP.svg -->
+              <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="./assets/icons/DPP.svg"></use>
+              </svg>
+              <span class="fs-4">Dépression Post Partum</span>
+            </a>
+          </li>
+          <!-- LOGO Part End -->
+          <li data-tabtitle="1" class="nav-item">
             <a href="#presentations" class="nav-link text-info">Présentations</a>
           </li>
-          <li data-tabtitle="1" class="nav-item">
+          <li data-tabtitle="2" class="nav-item">
             <a href="#definitions" class="nav-link text-info">Définitions</a>
           </li>
-          <li data-tabtitle="2" class="nav-item">
+          <li data-tabtitle="3" class="nav-item">
             <a href="#testimonials" class="nav-link text-info">Témoignages</a>
           </li>
-          <li data-tabtitle="3" class="nav-item">
+          <li data-tabtitle="4" class="nav-item">
             <a href="#forum" class="nav-link text-info">Forum</a>
           </li>
-          <li data-tabtitle="4" class="nav-item">
+          <li data-tabtitle="5" class="nav-item">
             <a href="#contact" class="nav-link text-info">Qui Contacter?</a>
           </li>
         </ul>
       </nav>
     </div>
+    <!-- Burger button Start -->
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <!-- Burger button End -->
   </header>
   <!-- TODO main part -->
   <main class="container">
-    <section id="home" class="row">
+    <section id="tab0" class="row active">
       SECTION home
       <figure class="figure">
         <img src="#" alt="" class="img-fluid figure-img">
@@ -99,7 +100,7 @@
       maxime doloribus, quibusdam quo minima cum fuga! Dolore, aliquid officia. Vero, rerum ab.
     </section>
     <!--End of Row Section-->
-    <section id="tab0" class="row active">
+    <section id="tab1" class="row">
       <div class="row">
         <h1>La Dépression Post Partum</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam facilis saepe adipisci ipsam possimus
@@ -187,7 +188,7 @@
       <!--End of Row Article-->
     </section>
     <!--End of Row Section-->
-    <section id="tab1" class="row">
+    <section id="tab2" class="row">
       <h2>SECTION definitions</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed veritatis odit quos atque dolor iste quas ratione
         consectetur. Ea maxime ipsum error cupiditate. Sed, ratione corporis! Enim sed asperiores officiis similique
@@ -205,7 +206,7 @@
         qui, voluptates optio facilis dicta magnam neque iste id!</p>
     </section>
     <!--End of Row Section-->
-    <section id="tab2" class="row">
+    <section id="tab3" class="row">
       <h2>SECTION testimonials</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed veritatis odit quos atque dolor iste quas ratione
         consectetur. Ea maxime ipsum error cupiditate. Sed, ratione corporis! Enim sed asperiores officiis similique
@@ -223,7 +224,7 @@
         qui, voluptates optio facilis dicta magnam neque iste id!</p>
     </section>
     <!--End of Row Section-->
-    <section id="tab3" class="row">
+    <section id="tab4" class="row">
       <h2>SECTION forum</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed veritatis odit quos atque dolor iste quas ratione
         consectetur. Ea maxime ipsum error cupiditate. Sed, ratione corporis! Enim sed asperiores officiis similique
@@ -241,7 +242,7 @@
         qui, voluptates optio facilis dicta magnam neque iste id!</p>
     </section>
     <!--End of Row Section-->
-    <section id="tab4" class="row">
+    <section id="tab5" class="row">
       <h2>SECTION contact</h2>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed veritatis odit quos atque dolor iste quas ratione
         consectetur. Ea maxime ipsum error cupiditate. Sed, ratione corporis! Enim sed asperiores officiis similique
@@ -263,7 +264,7 @@
   <!--End of Main Container-->
 
 
-  <!-- TODO fixed at the end of the page or at the end of the section -->
+
   <footer class="border-top page-footer font-small blue">
     <div class="footer-copyright text-center py-3">
 
