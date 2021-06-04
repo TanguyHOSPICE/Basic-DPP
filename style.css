@@ -1,0 +1,20 @@
+/* body {
+	background-color: #80c7fa;
+
+} */
+
+#navbar .navbar-nav li:hover {
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+main section:not(.active) {
+	display: none;
+	padding-bottom: 6rem;
+}
+
+main section.active {
+	display: block;
+	box-shadow: 0 0 2px #ccc;
+	margin-top: 3.7rem;
+}
