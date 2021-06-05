@@ -1,10 +1,22 @@
-header {
-	background-color: #e3f2fd;
+header{
+	background-color: #C6CFCC; !important
 }
 
-#navbar .navbar-nav li:hover {
-	background-color: #fff;
-	border-radius: 5px;
+#navbar li a {
+	color: #E7E9BB; !important
+}
+
+#navbar li a:hover {
+	color: #7D7C7C; !important
+	background-color: #E7E9BB;
+}
+
+#navbar li span.logo-title {
+	color: #7D7C7C;
+}
+
+#navbar li span.logo-title:hover {
+	color: #E7E9BB;
 }
 
 main section:not(.active) {
@@ -15,5 +27,5 @@ main section:not(.active) {
 main section.active {
 	display: block;
 	box-shadow: 0 0 2px #ccc;
-	margin-top: 3.7rem;
+	margin-top: 4.8rem;
 }
