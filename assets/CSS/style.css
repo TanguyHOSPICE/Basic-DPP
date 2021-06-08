@@ -1,3 +1,17 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: linear-gradient(to right, #403b4a, #e7e9bb);/*TODO choix couleur*/
+	color: whitesmoke;/*TODO choix couleur*/
+}
+
+/******************************************* HEADER *********/
+
 header{
 	background-color: #C6CFCC; !important
 }
@@ -13,12 +27,13 @@ header{
 
 #navbar li span.logo-title {
 	color: #7D7C7C;
+	/*TODO font-family: ; */
 }
 
 #navbar li span.logo-title:hover {
 	color: #E7E9BB;
 }
-
+/******************************************* MAIN *********/
 main section:not(.active) {
 	display: none;
 	padding-bottom: 6rem;
@@ -28,4 +43,40 @@ main section.active {
 	display: block;
 	box-shadow: 0 0 2px #ccc;
 	margin-top: 4.8rem;
+}
+/******************************************* SECTION #tab1 Présentations *********/
+main section#tab1 article#man-pres-left{
+	box-shadow: 1px 1px 6px  #e7e9bb ;
+	transform: translate(-10px, -10px);
+	border-radius: 5px;
+}
+
+main section#tab1 article#woman-pres-right{
+	box-shadow: 1px 1px 6px  #403b4a ;
+	transform: translate(10px, 30px);
+	border-radius: 5px;
+}
+
+main section#tab1 span.offline,
+main section#tab1 span.online{
+	font-style: italic;
+	font-weight: 200;
+}
+
+main section#tab1 span.cherie{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+main section#tab1 span.offline_ca{
+	text-transform: capitalize;
+}
+
+main section#tab1 span.underline_text{
+	text-decoration: underline;
+}
+
+main section#tab1 span.bold_text{
+	font-weight: bold;
 }
