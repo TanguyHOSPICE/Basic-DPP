@@ -1,8 +1,6 @@
 // Get images tag
-const images = document.querySelector('main.container section#tab0 img');
+const IMAGES = document.querySelector('main.container section#tab0 img');
 
-let urlImages = `/assets/media/page de garde/`;
-let i = 1;
 // Object images
 const tabImages = {
   image0 : {numImage:'1.jpg',altImage: 'Bb hurle et pleure'},
@@ -41,7 +39,76 @@ const tabImages = {
 
 };
 
-console.log(images.setAttribute('src',`${urlImages}${i}.jpg`));
+let time = 3000; //time between images
+/*
+// Voir les keys de tabImages
+console.log(Object.keys(tabImages));
+console.log(Object.values(tabImages));
+console.log(Object.entries(tabImages));
+console.log("--------------");
+console.log(Object.values(tabImages.image0.altImage)); 
+*/ 
+console.log("--------------");
+//Function 
+  const isObject = function(i) {
+    if (i === null) {
+      return false
+    }
+    return(typeof i === 'object')
+  }
 
+  //Change image
+function changeImg() {
+  //Récupère src d'img 
+  let srcImages = IMAGES.getAttribute("src");
+  //Récupère alt d'img 
+  let altImages = IMAGES.getAttribute("alt");
+
+  //Coupe src img pour boucle
+  let srcImagesFirstPart = srcImages.slice(0, 28);
+  //Coupe alt img pour boucle
+  let altImagesFirstPart = altImages.slice(0, 28);
+  // Affiche nouvelle src
+  let srcImagesChanging = `${srcImagesFirstPart}${tabImages[i]}`;
+  console.log(srcImagesChanging);
+  // Affiche nouvelle alt
+  let altImagesChanging = `${altImagesFirstPart}${tabImages[i][j]}`;
+
+  IMAGES.setAttribute("src", srcImagesChanging);
+  IMAGES.setAttribute("arc", altImagesChanging) ;
+  
+ 
+ 
+   if (i < tabImages.length -1) {
+       i++;
+   } else {
+       i =0;
+   }
+    
+   //Time apperance function
+   setTimeout("changeImg()", time);
+ }
+ 
+  
+// Interate inside tabImages
+for (let i in tabImages) {
+  if (isObject(tabImages[i])) {
+      for (let j in tabImages[i]) {
+          console.log(IMAGES);
+      }
+  }else {
+      console.log(tabImages[i]);
+  }
+
+}
+
+
+window.onload = changeImg;
+
+
+//loop
+// for (let [key, value] of Object.entries(tabImages)) {
+//   console.log(`${key} => ${value}`);
+// }
 
 
