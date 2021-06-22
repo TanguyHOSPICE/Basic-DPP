@@ -72,24 +72,26 @@ console.log('---------------------boucle ----------------');
 // Interate inside tabImages
 for (let i in tabImages) {
   
-  //   if (i < tabImages.length -1) {
-  //     i++;
-  // } else {
-  //     i =0;
-  // } 
+  // let altNewAttr = Images.setAttribute("alt", altFinal);
+  // i++;
   
   let srcFinal = srcImagesFirstPart + tabImages[i]["numImage"];
-  console.log(srcFinal);
-  Images.removeAttribute("src");
+  console.log(`-----------------N°slide: ${i}-----------------`);
+  console.log(`src attribute to inject: ${srcFinal}`);
+  // Images.removeAttribute("src");
   Images.setAttribute("src", srcFinal);
   // let srcNewAttr = Images.setAttribute("src", srcFinal[i]);
   // console.log(srcNewAttr);
   let altFinal = tabImages[i]["altImage"];
-  // let altNewAttr = Images.setAttribute("alt", altFinal);
-  // i++;
+  console.log(`alt attribute to inject: ${altFinal}`);
+   let inImg = Images.innerHtml = ` ${srcFinal[i]} ${altFinal}`;
+//   if (i < tabImages.length -1) {
+//     i++;
+// } else {
+//     i =0;
+// } 
   
-  Images.innerHtml = ` ${srcFinal[i]} ${altFinal}`;
-  console.log(Images);
+  console.log(inImg);
   i++;
 }
 
