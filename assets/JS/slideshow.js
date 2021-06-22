@@ -1,114 +1,129 @@
 // Get images tag
-const IMAGES = document.querySelector('main.container section#tab0 img');
+const Images = document.querySelector('main.container section#tab0 img');
 
 // Object images
 const tabImages = {
-  image0 : {numImage:'1.jpg',altImage: 'Bb hurle et pleure'},
+  slide1 : {numImage:'1.jpg',altImage: 'Bb hurle et pleure'},
 
-  image1 : {numImage:'2.jpg',altImage: 'Femme pointé du doigt'},
+  slide2 : {numImage:'2.jpg',altImage: 'Femme pointé du doigt'},
 
-  image2 : {numImage:'3.jpg',altImage: 'Femme inquiète'},
+  slide3 : {numImage:'3.jpg',altImage: 'Femme inquiète'},
 
-  image3 : {numImage:'4.jpg',altImage: 'Femme se tenant la tête recroquevillé sous la couette'},
+  slide4 : {numImage:'4.jpg',altImage: 'Femme se tenant la tête recroquevillé sous la couette'},
 
-  image4 : {numImage:'5.jpg',altImage: 'Femme recroquevillé, mains cachant son visage'},
+  slide5 : {numImage:'5.jpg',altImage: 'Femme recroquevillé, mains cachant son visage'},
 
-  image5 : {numImage:'6.jpg',altImage: 'Papa tête contre tête avec son bb'},
+  slide6 : {numImage:'6.jpg',altImage: 'Papa tête contre tête avec son bb'},
 
-  image6 : {numImage:'7.jpg',altImage: 'Main tendue vers femme avec ses mains cachant son visage'},
+  slide7 : {numImage:'7.jpg',altImage: 'Main tendue vers femme avec ses mains cachant son visage'},
 
-  image7 : {numImage:'8.jpg',altImage: 'Femme flouttée derrière une vitre'},
+  slide8 : {numImage:'8.jpg',altImage: 'Femme flouttée derrière une vitre'},
 
-  image8 : {numImage:'9.jpg',altImage: 'Femme et homme dos à dos'},
+  slide9 : {numImage:'9.jpg',altImage: 'Femme et homme dos à dos'},
 
-  image9 : {numImage:'10.jpg',altImage: 'Bb dormant paisiblement avec son doudou'},
+  slide10 : {numImage:'10.jpg',altImage: 'Bb dormant paisiblement avec son doudou'},
 
-  image10 : { numImage:'11.jpg',altImage: 'Bb et papa dormant paisiblement'},
+  slide11 : { numImage:'11.jpg',altImage: 'Bb et papa dormant paisiblement'},
 
-  image11 : {numImage:'12.jpg',altImage: 'Femme assise mains sur son visage'},
+  slide12 : {numImage:'12.jpg',altImage: 'Femme assise mains sur son visage'},
 
-  image12 : {numImage:'13.jpg',altImage: 'Femme dans les bras d\'un homme'},
+  slide13 : {numImage:'13.jpg',altImage: 'Femme dans les bras d\'un homme'},
 
-  image14 : {numImage:'14.jpg',altImage: 'Femme tenant un bb en face à face'},
+  slide14 : {numImage:'14.jpg',altImage: 'Femme tenant un bb en face à face'},
 
-  image13 : {numImage:'15.jpg',altImage: 'Femme tenant un bb sur son bicep en souriant'},
+  slide15 : {numImage:'15.jpg',altImage: 'Femme tenant un bb sur son bicep en souriant'},
 
-  image15 : { numImage:'16.jpg',altImage: 'Femme embrassant un bb'},
+  slide16 : { numImage:'16.jpg',altImage: 'Femme embrassant un bb'},
 
-  image16 : {numImage:'17.jpg',altImage: 'Femme et bb joue contre joue'}
+  slide17 : {numImage:'17.jpg',altImage: 'Femme et bb joue contre joue'}
 
 };
 
+
 let time = 3000; //time between images
-/*
-// Voir les keys de tabImages
-console.log(Object.keys(tabImages));
-console.log(Object.values(tabImages));
-console.log(Object.entries(tabImages));
-console.log("--------------");
-console.log(Object.values(tabImages.image0.altImage)); 
-*/ 
+
 console.log("--------------");
 //Function 
-  const isObject = function(i) {
-    if (i === null) {
-      return false
-    }
-    return(typeof i === 'object')
-  }
+  // const isObject = function(i) {
+  //   if (i === null) {
+  //     return false
+  //   }
+  //   return(typeof i === 'object')
+  // }
 
   //Change image
-function changeImg() {
-  //Récupère src d'img 
-  let srcImages = IMAGES.getAttribute("src");
-  //Récupère alt d'img 
-  let altImages = IMAGES.getAttribute("alt");
-
-  //Coupe src img pour boucle
-  let srcImagesFirstPart = srcImages.slice(0, 28);
-  //Coupe alt img pour boucle
-  let altImagesFirstPart = altImages.slice(0, 28);
-  // Affiche nouvelle src
-  let srcImagesChanging = `${srcImagesFirstPart}${tabImages[i]}`;
-  console.log(srcImagesChanging);
-  // Affiche nouvelle alt
-  let altImagesChanging = `${altImagesFirstPart}${tabImages[i][j]}`;
-
-  IMAGES.setAttribute("src", srcImagesChanging);
-  IMAGES.setAttribute("arc", altImagesChanging) ;
-  
+// function changeImg() {
  
- 
-   if (i < tabImages.length -1) {
-       i++;
-   } else {
-       i =0;
-   }
     
-   //Time apperance function
-   setTimeout("changeImg()", time);
- }
+//    //Time apperance function
+//    setTimeout("changeImg()", time);
+//  }
  
+console.log('---------------------boucle ----------------');
+ //Récupère src d'img 
+  let srcImages = Images.getAttribute("src"); 
+  //Récupère alt d'img 
+  let altImages = Images.getAttribute("alt");
   
+  //Coupe src img pour récup URL: /assets/media/page de garde/
+  let srcImagesFirstPart = srcImages.slice(0, 28);
+  
+
 // Interate inside tabImages
 for (let i in tabImages) {
-  if (isObject(tabImages[i])) {
-      for (let j in tabImages[i]) {
-          console.log(IMAGES);
-      }
-  }else {
-      console.log(tabImages[i]);
-  }
-
+  
+  //   if (i < tabImages.length -1) {
+  //     i++;
+  // } else {
+  //     i =0;
+  // } 
+  
+  let srcFinal = srcImagesFirstPart + tabImages[i]["numImage"];
+  console.log(srcFinal);
+  Images.removeAttribute("src");
+  Images.setAttribute("src", srcFinal);
+  // let srcNewAttr = Images.setAttribute("src", srcFinal[i]);
+  // console.log(srcNewAttr);
+  let altFinal = tabImages[i]["altImage"];
+  // let altNewAttr = Images.setAttribute("alt", altFinal);
+  // i++;
+  
+  Images.innerHtml = ` ${srcFinal[i]} ${altFinal}`;
+  console.log(Images);
+  i++;
 }
 
 
-window.onload = changeImg;
+
+// slideImage();
+// window.onload = changeImg;
 
 
-//loop
-// for (let [key, value] of Object.entries(tabImages)) {
-//   console.log(`${key} => ${value}`);
-// }
+/*
+//Récupère src d'img 
+let srcImages = Images.getAttribute("src"); 
+//Récupère alt d'img 
+let altImages = Images.getAttribute("alt");
+//cpteur
+let tabImagesIndex = 0;
+
+//Coupe src img pour boucle
+let srcImagesFirstPart = srcImages.slice(0, 28);
 
 
+// Affiche nouvelle src
+let srcImagesChanging = `${srcImagesFirstPart}${tabImages[element]["numImage"]}`;
+console.log(srcImagesChanging);
+// Affiche nouvelle alt
+let altImagesChanging = `alt="${tabImages[element]["altImage"]}"`;
+console.log(altImagesChanging);
+
+
+let newSrc = Images.setAttribute("src", srcImagesChanging);
+let newAlt = Images.setAttribute("alt", altImagesChanging) ;
+console.log(newSrc[element]);
+
+let attrChanging = `${newSrc} ${newAlt}`;  
+console.log('-------------------atrChanging------');
+console.log(attrChanging);
+*/
